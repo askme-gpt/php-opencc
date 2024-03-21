@@ -1,16 +1,24 @@
+# 来源
+这个包来源于：https://github.com/overtrue/php-opencc ，为啥要做同个功能的轮子呢？因为这个包不支持php8以前的版本，我有些老项目，升级比较麻烦，因此把代码稍微改了一下，以便php7.1以后的版本都能用。
+如果你的php版本在php8以上，请使用 https://github.com/overtrue/php-opencc ，以便获取最新的更新，虽然我的这个包也能在php8的环境下跑，但是性能肯定没有官方的那么好，因为jit原因。
+
+这个版本阉割了命令行功能，因为有些命令行有些单独的依赖，那些依赖也使用了php8，因此去掉了。
+
+如果遇到不兼容的问题，直接提issue，我会尽量在24小时之内处理完毕。
+
 # PHP OpenCC
 
 中文简繁转换，支持词汇级别的转换、异体字转换和地区习惯用词转换（中国大陆、台湾、香港、日本新字体）。基于 [BYVoid/OpenCC](https://github.com/BYVoid/OpenCC) 数据实现。
 
-[![Build Status](https://github.com/overtrue/php-opencc/actions/workflows/test.yml/badge.svg)](https://github.com/overtrue/php-opencc/actions/workflows/test.yml)
-[![Latest Stable Version](https://poser.pugx.org/overtrue/php-opencc/v/stable)](https://packagist.org/packages/overtrue/php-opencc)
-[![Total Downloads](https://poser.pugx.org/overtrue/php-opencc/downloads)](https://packagist.org/packages/overtrue/php-opencc)
-[![License](https://poser.pugx.org/overtrue/php-opencc/license)](https://packagist.org/packages/overtrue/php-opencc)
+[![Build Status](https://github.com/ysp/php-opencc/actions/workflows/test.yml/badge.svg)](https://github.com/ysp/php-opencc/actions/workflows/test.yml)
+[![Latest Stable Version](https://poser.pugx.org/ysp/php-opencc/v/stable)](https://packagist.org/packages/ysp/php-opencc)
+[![Total Downloads](https://poser.pugx.org/ysp/php-opencc/downloads)](https://packagist.org/packages/ysp/php-opencc)
+[![License](https://poser.pugx.org/ysp/php-opencc/license)](https://packagist.org/packages/ysp/php-opencc)
 
 ## 安装
 
 ```shell
-$ composer require overtrue/php-opencc -vvv
+composer require ysp/php-opencc -vvv
 ```
 
 ## 使用
@@ -65,48 +73,6 @@ echo OpenCC::convert('服务器', Strategy::SIMPLIFIED_TO_TAIWAN);
 | `JAPANESE_TO_TRADITIONAL(JP2T)`           | 日文到繁体           |
 | `JAPANESE_TO_SIMPLIFIED(JP2S)`            | 日文到简体           |
 
-
-### 在命令行使用
-
-```shell
-$ php vendor/bin/opencc "汉字" s2tw
-```
-
-说明：
-
-```bash
-$ php vendor/bin/opencc --help
-Description:
-  中文简繁转换，支持词汇级别的转换、异体字转换和地区习惯用词转换（中国大陆、台湾、香港、日本新字体）。
-
-Usage:
-  convert <string> [<strategy>]
-
-Arguments:
-  string                待转换的字符串
-  strategy              转换策略 [default: "SIMPLIFIED_TO_TRADITIONAL"]
-```
-
-## :heart: 赞助我 
-
-如果你喜欢我的项目并想支持它，[点击这里 :heart:](https://github.com/sponsors/overtrue)
-
-## Project supported by JetBrains
-
-Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.
-
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/overtrue)
-
-
-## 参与贡献
-
-You can contribute in one of three ways:
-
-1. File bug reports using the [issue tracker](https://github.com/overtrue/php-opencc/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/overtrue/php-opencc/issues).
-3. Contribute new features or update the wiki.
-
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
 
 ## License
 
