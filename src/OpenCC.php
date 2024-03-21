@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\PHPOpenCC;
+namespace Ysp\PHPOpenCC;
 
 /**
  * @method static string s2t(string $input)

@@ -1,8 +1,8 @@
 <?php
 
-namespace Overtrue\PHPOpenCC;
+namespace Ysp\PHPOpenCC;
 
-use Overtrue\PHPOpenCC\Contracts\ConverterInterface;
+use Ysp\PHPOpenCC\Contracts\ConverterInterface;
 
 class Converter implements ConverterInterface
 {

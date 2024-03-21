@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\PHPOpenCC\Contracts;
+namespace Ysp\PHPOpenCC\Contracts;
 
 interface ConverterInterface
 {

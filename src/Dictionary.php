@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\PHPOpenCC;
+namespace Ysp\PHPOpenCC;
 
 class Dictionary
 {
